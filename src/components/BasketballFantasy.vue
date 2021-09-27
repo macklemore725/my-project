@@ -379,6 +379,11 @@ var PostionPF = basketball.filter(function (e) {
 var PostionC = basketball.filter(function (e) {
   if (e.POS.toLowerCase().indexOf(Center.toLowerCase()) > -1) return e;
 });
+
+const fiilterF = d => d['POS'].includes('F');
+const fiilterG = d => d['POS'].includes('G');
+var PostionG = basketball.filter(fiilterF);
+var PostionF = basketball.filter(fiilterG);
 export default {
   name: "form-example",
   data: () => ({
@@ -389,8 +394,8 @@ export default {
     basketballsfddl: PostionSF,
     basketballpfddl: PostionPF,
     basketballcddl: PostionC,
-    basketballgddl: PositonSG, //this one is guards so i have to find a new filter for this.
-    basketballfddl: PostionPF, //this one is guards so i have to find a new filter for this.
+    basketballgddl: PostionG, //this one is guards so i have to find a new filter for this.
+    basketballfddl: PostionF, //this one is guards so i have to find a new filter for this.
     basketballutl1ddl: basketball,
     basketballutl2ddl: basketball,
     basketballutl3ddl: basketball,
@@ -399,8 +404,8 @@ export default {
     basketballsf: PostionSF,
     basketballpf: PostionPF,
     basketballc: PostionC,
-    basketballg: PositonSG, // this one is guards so i have to find a new filter for this
-    basketballf: PostionPF, // this one is guards so i have to find a new filter for this
+    basketballg: PostionG, // this one is guards so i have to find a new filter for this
+    basketballf: PostionF, // this one is guards so i have to find a new filter for this
     basketballutl1: basketball,
     basketballutl2: basketball,
     basketballutl3: basketball,

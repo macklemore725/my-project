@@ -407,7 +407,7 @@
     </table>
     <table class="container" v-else>
       <tr>
-        <td class="PositionTitle">UTL3</td>
+        <td class="PositionTitle">UTL2</td>
       </tr>
 
       <td>
@@ -452,7 +452,7 @@
     </table>
     <table class="container" v-else>
       <tr>
-        <td class="PositionTitle">UTL2</td>
+        <td class="PositionTitle">UTL3</td>
       </tr>
 
       <td>

@@ -115,7 +115,7 @@
 
     <table class="container" v-if="sfselected">
       <tr>
-        <th>Small Forward</th>
+        <td class="PositionTitle">Small Foward</td>
       </tr>
       <tr>
         <th>Player Name</th>
@@ -202,8 +202,8 @@
     </select>
 
     <table class="container" v-if="cselected">
-      <tr>
-        <th>Center</th>
+       <tr>
+        <td class="PositionTitle">Center </td>
       </tr>
       <tr>
         <th>Player Name</th>
@@ -234,6 +234,96 @@
         <B>No Players(c) Selected</B>
       </td>
     </table>
+ <!-- G Below-->
+ <select v-on:change="filterMember(event, 'G')" v-model="gselected">
+      <!-- v-model="selected"> -->
+      <option
+        v-for="g in basketballgddl"
+        v-bind:key="g.PLAYER"
+        v-bind:value="g"
+      >
+        {{ g.PLAYER }}
+      </option>
+    </select>
+
+    <table class="container" v-if="gselected">
+      <tr>
+        <td class="PositionTitle">G</td>
+      </tr>
+      <tr>
+        <th>Player Name</th>
+        <!-- <th>Rank</th> -->
+        <th>Position</th>
+        <th>Points</th>
+        <th>Rebound</th>
+        <th>FT%</th>
+      </tr>
+      <tr v-for="g in basketballg" v-bind:key="g.PLAYER">
+        <td>{{ g.PLAYER }}</td>
+        <!-- <td>{{m.Rk}}</td> -->
+        <td>{{ g.POS }}</td>
+        <td>{{ g.PTS }}</td>
+        <td>{{ g.TREB }}</td>
+        <td>{{ MathRoundUp(g["FT%"]) }}%</td>
+
+        <!-- Comment:Json the values are strings turn to int -->
+        <!-- <td>{{parseInt(m.TRB)+1}}</td> ˚ -->
+      </tr>
+    </table>
+    <table class="container" v-else>
+      <tr>
+        <td class="PositionTitle">G</td>
+      </tr>
+
+      <td>
+        <B>No Players(c) Selected</B>
+      </td>
+    </table>
+  <!-- F Below-->
+     <select v-on:change="filterMember(event, 'F')" v-model="fselected">
+      <!-- v-model="selected"> -->
+      <option
+        v-for="f in basketballfddl"
+        v-bind:key="f.PLAYER"
+        v-bind:value="f"
+      >
+        {{ f.PLAYER }}
+      </option>
+    </select>
+
+    <table class="container" v-if="fselected">
+      <tr>
+        <td class="PositionTitle">F</td>
+      </tr>
+      <tr>
+        <th>Player Name</th>
+        <!-- <th>Rank</th> -->
+        <th>Position</th>
+        <th>Points</th>
+        <th>Rebound</th>
+        <th>FT%</th>
+      </tr>
+      <tr v-for="f in basketballf" v-bind:key="f.PLAYER">
+        <td>{{ f.PLAYER }}</td>
+        <!-- <td>{{m.Rk}}</td> -->
+        <td>{{ f.POS }}</td>
+        <td>{{ f.PTS }}</td>
+        <td>{{ f.TREB }}</td>
+        <td>{{ MathRoundUp(f["FT%"]) }}%</td>
+
+        <!-- Comment:Json the values are strings turn to int -->
+        <!-- <td>{{parseInt(m.TRB)+1}}</td> ˚ -->
+      </tr>
+    </table>
+    <table class="container" v-else>
+      <tr>
+        <td class="PositionTitle">F</td>
+      </tr>
+
+      <td>
+        <B>No Players(c) Selected</B>
+      </td>
+    </table>
     <!-- Utl1 Below-->
     <select v-on:change="filterMember(event, 'UTL1')" v-model="UTL1selected">
       <!-- v-model="selected"> -->
@@ -248,7 +338,7 @@
 
     <table class="container" v-if="UTL1selected">
       <tr>
-        <th>UTL1</th>
+        <td class="PositionTitle">UTL1</td>
       </tr>
       <tr>
         <th>Player Name</th>
@@ -280,7 +370,97 @@
       </td>
     </table>
     <!-- Utl2 Below-->
+    <select v-on:change="filterMember(event, 'UTL2')" v-model="UTL2selected">
+      <!-- v-model="selected"> -->
+      <option
+        v-for="ult2 in basketballutl2ddl"
+        v-bind:key="ult2.PLAYER"
+        v-bind:value="ult2"
+      >
+        {{ ult2.PLAYER }}
+      </option>
+    </select>
+
+    <table class="container" v-if="UTL2selected">
+      <tr>
+        <td class="PositionTitle">UTL2</td>
+      </tr>
+      <tr>
+        <th>Player Name</th>
+        <!-- <th>Rank</th> -->
+        <th>Position</th>
+        <th>Points</th>
+        <th>Rebound</th>
+        <th>FT%</th>
+      </tr>
+      <tr v-for="ult2 in basketballutl2" v-bind:key="ult2.PLAYER">
+        <td>{{ ult2.PLAYER }}</td>
+        <!-- <td>{{m.Rk}}</td> -->
+        <td>{{ ult2.POS }}</td>
+        <td>{{ ult2.PTS }}</td>
+        <td>{{ ult2.TREB }}</td>
+        <td>{{ MathRoundUp(ult2["FT%"]) }}%</td>
+
+        <!-- Comment:Json the values are strings turn to int -->
+        <!-- <td>{{parseInt(m.TRB)+1}}</td> ˚ -->
+      </tr>
+    </table>
+    <table class="container" v-else>
+      <tr>
+        <td class="PositionTitle">UTL3</td>
+      </tr>
+
+      <td>
+        <B>No Players(c) Selected</B>
+      </td>
+    </table>
     <!-- Utl3 Below-->
+ <select v-on:change="filterMember(event, 'UTL3')" v-model="UTL3selected">
+      <!-- v-model="selected"> -->
+      <option
+        v-for="ult3 in basketballutl3ddl"
+        v-bind:key="ult3.PLAYER"
+        v-bind:value="ult3"
+      >
+        {{ ult3.PLAYER }}
+      </option>
+    </select>
+
+    <table class="container" v-if="UTL3selected">
+   <tr>
+        <td class="PositionTitle">UTL3</td>
+      </tr>
+      <tr>
+        <th>Player Name</th>
+        <!-- <th>Rank</th> -->
+        <th>Position</th>
+        <th>Points</th>
+        <th>Rebound</th>
+        <th>FT%</th>
+      </tr>
+      <tr v-for="ult3 in basketballutl3" v-bind:key="ult3.PLAYER">
+        <td>{{ ult3.PLAYER }}</td>
+        <!-- <td>{{m.Rk}}</td> -->
+        <td>{{ ult3.POS }}</td>
+        <td>{{ ult3.PTS }}</td>
+        <td>{{ ult3.TREB }}</td>
+        <td>{{ MathRoundUp(ult3["FT%"]) }}%</td>
+
+        <!-- Comment:Json the values are strings turn to int -->
+        <!-- <td>{{parseInt(m.TRB)+1}}</td> ˚ -->
+      </tr>
+    </table>
+    <table class="container" v-else>
+      <tr>
+        <td class="PositionTitle">UTL2</td>
+      </tr>
+
+      <td>
+        <B>No Players(c) Selected</B>
+      </td>
+    </table>
+
+    <hr>
     <!-- Total Below  -->
     <table class="container">
       <tr>
@@ -288,8 +468,14 @@
       </tr>
       <tr>
         <!-- <th>Rank</th> -->
+
         <th>Total Points</th>
         <th>Total Rebound</th>
+        <th>Steal</th>
+        <th>TurnOver</th> 
+        <th>Block</th>
+        <th>Assist</th>
+        <th>3PM</th>
         <th>FT%</th>
         <th>FG%</th>
       </tr>
@@ -302,8 +488,11 @@
               sgselected.PTS,
               pfselected.PTS,
               cselected.PTS,
-              UTL1selected.PTS
-
+              gselected.PTS,
+              fselected.PTS,
+              UTL1selected.PTS,
+               UTL2selected.PTS,
+                UTL3selected.PTS,
             )
           }}
         </td>
@@ -316,7 +505,96 @@
               sgselected.TREB,
               pfselected.TREB,
               cselected.TREB,
-              UTL1selected.PTS
+                gselected.TREB,
+              fselected.TREB,
+              UTL1selected.TREB,
+              UTL2selected.TREB,
+              UTL3selected.TREB,
+
+            )
+          }}
+        </td>
+        <td>
+          {{
+            AddingTotals(
+              pselected.STL,
+              sfselected.STL,
+              sgselected.STL,
+              pfselected.STL,
+              cselected.STL,
+                gselected.STL,
+              fselected.STL,
+              UTL1selected.STL,
+              UTL2selected.STL,
+              UTL3selected.STL,
+
+            )
+          }}
+        </td>
+        <td>
+          {{
+            AddingTotals(
+              pselected.TO,
+              sfselected.TO,
+              sgselected.TO,
+              pfselected.TO,
+              cselected.TO,
+                gselected.TO,
+              fselected.TO,
+              UTL1selected.TO,
+              UTL2selected.TO,
+              UTL3selected.TO,
+
+            )
+          }}
+        </td>
+        <td>
+          {{
+            AddingTotals(
+              pselected.BLK,
+              sfselected.BLK,
+              sgselected.BLK,
+              pfselected.BLK,
+              cselected.BLK,
+                gselected.BLK,
+              fselected.BLK,
+              UTL1selected.BLK,
+              UTL2selected.BLK,
+              UTL3selected.BLK,
+
+            )
+          }}
+        </td>
+        <td>
+          {{
+            AddingTotals(
+              pselected.AST,
+              sfselected.AST,
+              sgselected.AST,
+              pfselected.AST,
+              cselected.AST,
+                gselected.AST,
+              fselected.AST,
+              UTL1selected.AST,
+              UTL2selected.AST,
+              UTL3selected.AST,
+
+            )
+          }}
+        </td>
+        <td>
+          {{
+            AddingTotals(
+              pselected["3PM"],
+              sfselected["3PM"],
+              sgselected["3PM"],
+              pfselected["3PM"],
+              cselected["3PM"],
+                gselected["3PM"],
+              fselected["3PM"],
+              UTL1selected["3PM"],
+              UTL2selected["3PM"],
+              UTL3selected["3PM"],
             )
           }}
         </td>
@@ -328,7 +606,11 @@
               sgselected["FT%"],
               pfselected["FT%"],
               cselected["FT%"],
-              UTL1selected["FT%"]
+              gselected["FT%"],
+               fselected["FT%"],
+              UTL1selected["FT%"],
+              UTL2selected["FT%"],
+              UTL3selected["FT%"],
             )
           }}%
         </td>
@@ -340,7 +622,11 @@
               sgselected["FG%"],
               pfselected["FG%"],
               cselected["FG%"],
-              UTL1selected["FG%"]
+              gselected["FG%"],
+              fselected["FG%"],
+              UTL1selected["FG%"],
+              UTL2selected["FG%"],
+              UTL3selected["FG%"],
             )
           }}%
         </td>
@@ -382,8 +668,8 @@ var PostionC = basketball.filter(function (e) {
 
 const fiilterF = d => d['POS'].includes('F');
 const fiilterG = d => d['POS'].includes('G');
-var PostionG = basketball.filter(fiilterF);
-var PostionF = basketball.filter(fiilterG);
+var PostionG = basketball.filter(fiilterG);
+var PostionF = basketball.filter(fiilterF);
 export default {
   name: "form-example",
   data: () => ({
@@ -501,6 +787,51 @@ export default {
           })
         );
         this.basketballutl1 = basketball.filter(function (e) {
+          return e.PLAYER === val1["PLAYER"];
+        });
+      } else if (type === "UTL2") {
+        var val1 = vm.UTL2selected;
+        console.log(val1);
+        console.log(
+          basketball.filter(function (e) {
+            return e.PLAYER === val1["PLAYER"];
+          })
+        );
+        this.basketballutl2 = basketball.filter(function (e) {
+          return e.PLAYER === val1["PLAYER"];
+        });
+      } else if (type === "UTL3") {
+        var val1 = vm.UTL3selected;
+        console.log(val1);
+        console.log(
+          basketball.filter(function (e) {
+            return e.PLAYER === val1["PLAYER"];
+          })
+        );
+        this.basketballutl3 = basketball.filter(function (e) {
+          return e.PLAYER === val1["PLAYER"];
+        });
+      } else if (type === "G") {
+        var val1 = vm.gselected;
+        console.log(val1);
+        console.log(
+          basketball.filter(function (e) {
+            return e.PLAYER === val1["PLAYER"];
+          })
+        );
+        this.basketballg = basketball.filter(function (e) {
+          return e.PLAYER === val1["PLAYER"];
+        });
+      } 
+       else if (type === "F") {
+        var val1 = vm.fselected;
+        console.log(val1);
+        console.log(
+          basketball.filter(function (e) {
+            return e.PLAYER === val1["PLAYER"];
+          })
+        );
+        this.basketballf = basketball.filter(function (e) {
           return e.PLAYER === val1["PLAYER"];
         });
       } 
@@ -629,13 +960,13 @@ export default {
       }
 
       if (UTL2 != 0) {
-        if (!num.includes("UTL1")) {
-          num.push("UTL1");
+        if (!num.includes("UTL2")) {
+          num.push("UTL2");
         }
       }
       if (UTL3 != 0) {
-        if (!num.includes("UTL1")) {
-          num.push("UTL1");
+        if (!num.includes("UTL3")) {
+          num.push("UTL3");
         }
       }
       console.log(num.length);

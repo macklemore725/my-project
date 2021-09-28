@@ -1,55 +1,51 @@
 <template>
   <div id="app">
-    <h1>
-      Basketball Fantasy Simulator
-      <h2>Create by PurpleDino</h2>
+    <h1>Basketball Fantasy Simulator</h1>
+    <h2>Create by Macklemore</h2>
 
-      <BasketballFantasySimulator />
+    <BasketballFantasySimulator />
 
-      <!-- Site footer -->
-      <footer class="site-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-6">
-              <h6>About</h6>
-              <p class="text-justify">
-                Fantasy Simulator. Data used from
-                <a
-                  href="https://hashtagbasketball.com/fantasy-basketball-projections"
-                  >HashTagBasketball</a
+    <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">
+              Fantasy Simulator. Data used from
+              <a
+                href="https://hashtagbasketball.com/fantasy-basketball-projections"
+                >HashTagBasketball</a
+              >
+            </p>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li>
+                <a href="https://codepen.io/pablorgarcia/pen/qdIsm"
+                  >CSS Table</a
                 >
-              </p>
-            </div>
-            <div class="col-xs-6 col-md-3">
-              <h6>Quick Links</h6>
-              <ul class="footer-links">
-                <li>
-                  <a href="https://codepen.io/pablorgarcia/pen/qdIsm"
-                    >CSS Table</a
-                  >
-                </li>
-                <li><a href="https://v3.vuejs.org/">VueJs</a></li>
-                <li>
-                  <a href="https://codepen.io/scanfcode/pen/MEZPNd"
-                    >Css Footer</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <hr />
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-sm-6 col-xs-12">
-              <p class="copyright-text">
-                Copyright &copy; 2021 All Rights Reserved by Macklemore
-              </p>
-            </div>
+              </li>
+              <li><a href="https://v3.vuejs.org/">VueJs</a></li>
+              <li>
+                <a href="https://codepen.io/scanfcode/pen/MEZPNd">Css Footer</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </footer>
-    </h1>
+        <hr />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">
+              Copyright &copy; 2021 All Rights Reserved by Macklemore
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -92,7 +88,7 @@ select {
 }
 
 h1 {
-  font-size: 1.5em;
+  font-size: 4em;
   font-weight: 300;
   line-height: 1em;
   text-align: center;
@@ -100,7 +96,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1em;
+  font-size: 2em;
   font-weight: 300;
   text-align: center;
   display: block;
@@ -123,11 +119,11 @@ h2 a {
   color: #fff842;
 }
 
-.container th h1 {
+.container th {
   font-weight: bold;
-  font-size: 1px;
+  font-size: 20px;
   text-align: left;
-  color: #185875;
+  color: #4dc3fa;
 }
 
 .container td {

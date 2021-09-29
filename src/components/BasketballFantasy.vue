@@ -779,60 +779,60 @@ export default {
           return e.PLAYER === valc["PLAYER"];
         });
       } else if (type === "UTL1") {
-        var val1 = vm.UTL1selected;
-        console.log(val1);
+        var valult1 = vm.UTL1selected;
+        console.log(valult1);
         console.log(
           basketball.filter(function (e) {
-            return e.PLAYER === val1["PLAYER"];
+            return e.PLAYER === valult1["PLAYER"];
           })
         );
         this.basketballutl1 = basketball.filter(function (e) {
-          return e.PLAYER === val1["PLAYER"];
+          return e.PLAYER === valult1["PLAYER"];
         });
       } else if (type === "UTL2") {
-        var val1 = vm.UTL2selected;
-        console.log(val1);
+        var valult2 = vm.UTL2selected;
+        console.log(valult2);
         console.log(
           basketball.filter(function (e) {
-            return e.PLAYER === val1["PLAYER"];
+            return e.PLAYER === valult2["PLAYER"];
           })
         );
         this.basketballutl2 = basketball.filter(function (e) {
-          return e.PLAYER === val1["PLAYER"];
+          return e.PLAYER === valult2["PLAYER"];
         });
       } else if (type === "UTL3") {
-        var val1 = vm.UTL3selected;
-        console.log(val1);
+        var valult3 = vm.UTL3selected;
+        console.log(valult3);
         console.log(
           basketball.filter(function (e) {
-            return e.PLAYER === val1["PLAYER"];
+            return e.PLAYER === valult3["PLAYER"];
           })
         );
         this.basketballutl3 = basketball.filter(function (e) {
-          return e.PLAYER === val1["PLAYER"];
+          return e.PLAYER === valult3["PLAYER"];
         });
       } else if (type === "G") {
-        var val1 = vm.gselected;
-        console.log(val1);
+        var valg = vm.gselected;
+        console.log(valg);
         console.log(
           basketball.filter(function (e) {
-            return e.PLAYER === val1["PLAYER"];
+            return e.PLAYER === valg["PLAYER"];
           })
         );
         this.basketballg = basketball.filter(function (e) {
-          return e.PLAYER === val1["PLAYER"];
+          return e.PLAYER === valg["PLAYER"];
         });
       } 
        else if (type === "F") {
-        var val1 = vm.fselected;
-        console.log(val1);
+        var valf = vm.fselected;
+        console.log(valf);
         console.log(
           basketball.filter(function (e) {
-            return e.PLAYER === val1["PLAYER"];
+            return e.PLAYER === valf["PLAYER"];
           })
         );
         this.basketballf = basketball.filter(function (e) {
-          return e.PLAYER === val1["PLAYER"];
+          return e.PLAYER === valf["PLAYER"];
         });
       } 
       

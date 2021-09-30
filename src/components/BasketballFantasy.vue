@@ -465,7 +465,7 @@
         <th> Points</th>
         <th> Rebound</th>
         <th>Steal</th>
-        <th>TurnOver</th>
+        <th>TO</th>
         <th>Block</th>
         <th>Assist</th>
         <th>3PM</th>
@@ -834,7 +834,7 @@
         <th>Total Points</th>
         <th>Total Rebound</th>
         <th>Steal</th>
-        <th>TurnOver</th>
+        <th>TO</th>
         <th>Block</th>
         <th>Assist</th>
         <th>3PM</th>

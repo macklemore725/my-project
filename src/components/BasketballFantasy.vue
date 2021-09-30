@@ -501,10 +501,10 @@
          {{pselected["3PM"]}}
         </td>
           <td>
-         {{pselected["FT%"]}}
+         {{MathRoundUp(pselected["FT%"])}}%
         </td>
           <td>
-         {{pselected["FG%"]}}
+         {{MathRoundUp(pselected["FG%"])}}%
         </td>
       </tr>
       <tr>
@@ -536,10 +536,10 @@
          {{sgselected["3PM"]}}
         </td>
           <td>
-         {{sgselected["FT%"]}}
+         {{MathRoundUp(sgselected["FT%"])}}%
         </td>
           <td>
-         {{sgselected["FG%"]}}
+         {{MathRoundUp(sgselected["FG%"])}}%
         </td>
       </tr>
       <tr>
@@ -570,11 +570,11 @@
           <td>
          {{sfselected["3PM"]}}
         </td>
-          <td>
-         {{sfselected["FT%"]}}
+                    <td>
+         {{MathRoundUp(sfselected["FT%"])}}%
         </td>
           <td>
-         {{sfselected["FG%"]}}
+         {{MathRoundUp(sfselected["FG%"])}}%
         </td>
       </tr>
       <tr>
@@ -606,10 +606,10 @@
          {{pfselected["3PM"]}}
         </td>
           <td>
-         {{pfselected["FT%"]}}
+         {{MathRoundUp(pfselected["FT%"])}}%
         </td>
           <td>
-         {{pfselected["FG%"]}}
+         {{MathRoundUp(pfselected["FG%"])}}%
         </td>
       </tr>
       <tr>
@@ -641,10 +641,10 @@
          {{cselected["3PM"]}}
         </td>
           <td>
-         {{cselected["FT%"]}}
+         {{MathRoundUp(cselected["FT%"])}}%
         </td>
           <td>
-         {{cselected["FG%"]}}
+         {{MathRoundUp(cselected["FG%"])}}%
         </td>
       </tr>
       <tr>
@@ -676,10 +676,10 @@
          {{gselected["3PM"]}}
         </td>
           <td>
-         {{gselected["FT%"]}}
+         {{MathRoundUp(gselected["FT%"])}}%
         </td>
           <td>
-         {{gselected["FG%"]}}
+         {{MathRoundUp(gselected["FG%"])}}%
         </td>
       </tr>
 <tr>
@@ -711,10 +711,10 @@
          {{fselected["3PM"]}}
         </td>
           <td>
-         {{fselected["FT%"]}}
+         {{MathRoundUp(fselected["FT%"])}}%
         </td>
           <td>
-         {{fselected["FG%"]}}
+         {{MathRoundUp(fselected["FG%"])}}%
         </td>
       </tr>
       <tr>
@@ -745,11 +745,12 @@
           <td>
          {{UTL1selected["3PM"]}}
         </td>
+        
           <td>
-         {{UTL1selected["FT%"]}}
+         {{MathRoundUp(UTL1selected["FT%"])}}%
         </td>
           <td>
-         {{UTL1selected["FG%"]}}
+         {{MathRoundUp(UTL1selected["FG%"])}}%
         </td>
       </tr>
       <tr>
@@ -781,10 +782,10 @@
          {{UTL2selected["3PM"]}}
         </td>
           <td>
-         {{UTL2selected["FT%"]}}
+         {{MathRoundUp(UTL2selected["FT%"])}}%
         </td>
           <td>
-         {{UTL2selected["FG%"]}}
+         {{MathRoundUp(UTL2selected["FG%"])}}%
         </td>
       </tr>
       <tr>
@@ -816,10 +817,10 @@
          {{UTL3selected["3PM"]}}
         </td>
           <td>
-         {{UTL3selected["FT%"]}}
+         {{MathRoundUp(UTL3selected["FT%"])}}%
         </td>
           <td>
-         {{UTL3selected["FG%"]}}
+         {{MathRoundUp(UTL3selected["FG%"])}}%
         </td>
       </tr>
     </table>
@@ -989,7 +990,7 @@
         </td>
         <!-- Comment:Json the values are strings turn to int -->
         <!-- <td>{{parseInt(m.TRB)+1}}</td> ˚ -->
-        <td></td>
+
       </tr>
     </table>
   </div>

@@ -148,6 +148,12 @@ h2 a {
   padding-bottom: 1%;
   padding-top: 1%;
   padding-left: 1%;
+  width: auto;
+}
+
+table {
+  table-layout: fixed;
+  width: 200%;
 }
 
 /* Background-color of the odd rows */
@@ -166,6 +172,10 @@ h2 a {
 
 .container td:first-child {
   color: #fb667a;
+}
+.container td.last {
+  width: 1px;
+  white-space: nowrap;
 }
 
 .container tr:hover {

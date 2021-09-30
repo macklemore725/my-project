@@ -24,9 +24,9 @@
       <tr>
         <th>Player Name</th>
         <th>Position</th>
-        <th>Points</th>
-        <th>Rebound</th>
-        <th>FT%</th>
+        <!-- <th>Points</th> -->
+        <!-- <th>Rebound</th>
+        <th>FT%</th> -->
       </tr>
       <tr v-for="p in basketballpg" v-bind:key="p.PLAYER">
         <td>{{ p.PLAYER }}</td>
@@ -35,9 +35,9 @@
         <!-- Not ROunded -->
         <!-- <td>{{p["FT%"].substring(0, p["FT%"].indexOf("("))*100}}</td> -->
         <td>{{ p.POS }}</td>
-        <td>{{ p.PTS }}</td>
-        <td>{{ p.TREB }}</td>
-        <td>{{ MathRoundUp(p["FT%"]) }}%</td>
+        <!-- <td>{{ p.PTS }}</td> -->
+        <!-- <td>{{ p.TREB }}</td>
+        <td>{{ MathRoundUp(p["FT%"]) }}%</td> -->
         <!-- <td>{{AddingTotals(p["FT%"])}}</td> -->
         <!-- Comment:Json the values are strings turn to int -->
         <!-- <td>{{parseInt(m.TRB)+1}}</td> ˚ -->
@@ -75,18 +75,18 @@
       <tr>
         <th>Player Name</th>
         <th>Position</th>
-        <th>Points</th>
-        <th>Rebound</th>
-        <th>FT%</th>
+        <!-- <th>Points</th> -->
+        <!-- <th>Rebound</th>
+        <th>FT%</th> -->
       </tr>
 
       <tr v-for="sg in basketballsg" v-bind:key="sg.PLAYER">
         <td>{{ sg.PLAYER }}</td>
         <!-- <td>{{String(p['R#']).split(' ')[1]}}</td> -->
         <td>{{ sg.POS }}</td>
-        <td>{{ sg.PTS }}</td>
-        <td>{{ sg.TREB }}</td>
-        <td>{{ MathRoundUp(sg["FT%"]) }}%</td>
+        <!-- <td>{{ sg.PTS }}</td> -->
+        <!-- <td>{{ sg.TREB }}</td>
+        <td>{{ MathRoundUp(sg["FT%"]) }}%</td> -->
         <!-- Comment:Json the values are strings turn to int -->
         <!-- <td>{{parseInt(m.TRB)+1}}</td> ˚ -->
       </tr>
@@ -119,19 +119,18 @@
       </tr>
       <tr>
         <th>Player Name</th>
-        <!-- <th>Rank</th> -->
         <th>Position</th>
-        <th>Points</th>
-        <th>Rebound</th>
-        <th>FT%</th>
+        <!-- <th>Points</th> -->
+        <!-- <th>Rebound</th>
+        <th>FT%</th> -->
       </tr>
       <tr v-for="m in basketballsf" v-bind:key="m.PLAYER">
         <td>{{ m.PLAYER }}</td>
         <!-- <td>{{m.Rk}}</td> -->
         <td>{{ m.POS }}</td>
-        <td>{{ m.PTS }}</td>
-        <td>{{ m.TREB }}</td>
-        <td>{{ MathRoundUp(m["FT%"]) }}%</td>
+        <!-- <td>{{ m.PTS }}</td> -->
+        <!-- <td>{{ m.TREB }}</td>
+        <td>{{ MathRoundUp(m["FT%"]) }}%</td> -->
         <!-- Comment:Json the values are strings turn to int -->
         <!-- <td>{{parseInt(m.TRB)+1}}</td> ˚ -->
       </tr>
@@ -158,24 +157,24 @@
     </select>
 
     <table class="container" v-if="pfselected">
-      <tr>
-        <th>Power Foward</th>
+       <tr>
+        <td class="PositionTitle">Power Foward</td>
       </tr>
+
       <tr>
         <th>Player Name</th>
-        <!-- <th>Rank</th> -->
         <th>Position</th>
-        <th>Points</th>
-        <th>Rebound</th>
-        <th>FT%</th>
+        <!-- <th>Points</th> -->
+        <!-- <th>Rebound</th>
+        <th>FT%</th> -->
       </tr>
       <tr v-for="pf in basketballpf" v-bind:key="pf.PLAYER">
         <td>{{ pf.PLAYER }}</td>
         <!-- <td>{{m.Rk}}</td> -->
         <td>{{ pf.POS }}</td>
-        <td>{{ pf.PTS }}</td>
-        <td>{{ pf.TREB }}</td>
-        <td>{{ MathRoundUp(pf["FT%"]) }}%</td>
+        <!-- <td>{{ pf.PTS }}</td> -->
+        <!-- <td>{{ pf.TREB }}</td>
+        <td>{{ MathRoundUp(pf["FT%"]) }}%</td> -->
         <!-- Comment:Json the values are strings turn to int -->
         <!-- <td>{{parseInt(m.TRB)+1}}</td> ˚ -->
       </tr>
@@ -202,24 +201,23 @@
     </select>
 
     <table class="container" v-if="cselected">
-       <tr>
-        <td class="PositionTitle">Center </td>
+      <tr>
+        <td class="PositionTitle">Center</td>
       </tr>
       <tr>
         <th>Player Name</th>
-        <!-- <th>Rank</th> -->
         <th>Position</th>
-        <th>Points</th>
-        <th>Rebound</th>
-        <th>FT%</th>
+        <!-- <th>Points</th> -->
+        <!-- <th>Rebound</th>
+        <th>FT%</th> -->
       </tr>
       <tr v-for="c in basketballc" v-bind:key="c.PLAYER">
         <td>{{ c.PLAYER }}</td>
         <!-- <td>{{m.Rk}}</td> -->
         <td>{{ c.POS }}</td>
-        <td>{{ c.PTS }}</td>
-        <td>{{ c.TREB }}</td>
-        <td>{{ MathRoundUp(c["FT%"]) }}%</td>
+        <!-- <td>{{ c.PTS }}</td> -->
+        <!-- <td>{{ c.TREB }}</td>
+        <td>{{ MathRoundUp(c["FT%"]) }}%</td> -->
 
         <!-- Comment:Json the values are strings turn to int -->
         <!-- <td>{{parseInt(m.TRB)+1}}</td> ˚ -->
@@ -234,8 +232,8 @@
         <B>No Players(c) Selected</B>
       </td>
     </table>
- <!-- G Below-->
- <select v-on:change="filterMember(event, 'G')" v-model="gselected">
+    <!-- G Below-->
+    <select v-on:change="filterMember(event, 'G')" v-model="gselected">
       <!-- v-model="selected"> -->
       <option
         v-for="g in basketballgddl"
@@ -252,19 +250,18 @@
       </tr>
       <tr>
         <th>Player Name</th>
-        <!-- <th>Rank</th> -->
         <th>Position</th>
-        <th>Points</th>
-        <th>Rebound</th>
-        <th>FT%</th>
+        <!-- <th>Points</th> -->
+        <!-- <th>Rebound</th>
+        <th>FT%</th> -->
       </tr>
       <tr v-for="g in basketballg" v-bind:key="g.PLAYER">
         <td>{{ g.PLAYER }}</td>
         <!-- <td>{{m.Rk}}</td> -->
         <td>{{ g.POS }}</td>
-        <td>{{ g.PTS }}</td>
-        <td>{{ g.TREB }}</td>
-        <td>{{ MathRoundUp(g["FT%"]) }}%</td>
+        <!-- <td>{{ g.PTS }}</td> -->
+        <!-- <td>{{ g.TREB }}</td>
+        <td>{{ MathRoundUp(g["FT%"]) }}%</td> -->
 
         <!-- Comment:Json the values are strings turn to int -->
         <!-- <td>{{parseInt(m.TRB)+1}}</td> ˚ -->
@@ -279,8 +276,8 @@
         <B>No Players(c) Selected</B>
       </td>
     </table>
-  <!-- F Below-->
-     <select v-on:change="filterMember(event, 'F')" v-model="fselected">
+    <!-- F Below-->
+    <select v-on:change="filterMember(event, 'F')" v-model="fselected">
       <!-- v-model="selected"> -->
       <option
         v-for="f in basketballfddl"
@@ -297,19 +294,18 @@
       </tr>
       <tr>
         <th>Player Name</th>
-        <!-- <th>Rank</th> -->
         <th>Position</th>
-        <th>Points</th>
-        <th>Rebound</th>
-        <th>FT%</th>
+        <!-- <th>Points</th> -->
+        <!-- <th>Rebound</th>
+        <th>FT%</th> -->
       </tr>
       <tr v-for="f in basketballf" v-bind:key="f.PLAYER">
         <td>{{ f.PLAYER }}</td>
         <!-- <td>{{m.Rk}}</td> -->
         <td>{{ f.POS }}</td>
-        <td>{{ f.PTS }}</td>
-        <td>{{ f.TREB }}</td>
-        <td>{{ MathRoundUp(f["FT%"]) }}%</td>
+        <!-- <td>{{ f.PTS }}</td> -->
+        <!-- <td>{{ f.TREB }}</td>
+        <td>{{ MathRoundUp(f["FT%"]) }}%</td> -->
 
         <!-- Comment:Json the values are strings turn to int -->
         <!-- <td>{{parseInt(m.TRB)+1}}</td> ˚ -->
@@ -342,19 +338,18 @@
       </tr>
       <tr>
         <th>Player Name</th>
-        <!-- <th>Rank</th> -->
         <th>Position</th>
-        <th>Points</th>
-        <th>Rebound</th>
-        <th>FT%</th>
+        <!-- <th>Points</th> -->
+        <!-- <th>Rebound</th>
+        <th>FT%</th> -->
       </tr>
       <tr v-for="ult1 in basketballutl1" v-bind:key="ult1.PLAYER">
         <td>{{ ult1.PLAYER }}</td>
         <!-- <td>{{m.Rk}}</td> -->
-        <td>{{ ult1.POS }}</td>
+        <!-- <td>{{ ult1.POS }}</td> -->
         <td>{{ ult1.PTS }}</td>
-        <td>{{ ult1.TREB }}</td>
-        <td>{{ MathRoundUp(ult1["FT%"]) }}%</td>
+        <!-- <td>{{ ult1.TREB }}</td>
+        <td>{{ MathRoundUp(ult1["FT%"]) }}%</td> -->
 
         <!-- Comment:Json the values are strings turn to int -->
         <!-- <td>{{parseInt(m.TRB)+1}}</td> ˚ -->
@@ -387,19 +382,18 @@
       </tr>
       <tr>
         <th>Player Name</th>
-        <!-- <th>Rank</th> -->
         <th>Position</th>
-        <th>Points</th>
-        <th>Rebound</th>
-        <th>FT%</th>
+        <!-- <th>Points</th> -->
+        <!-- <th>Rebound</th>
+        <th>FT%</th> -->
       </tr>
       <tr v-for="ult2 in basketballutl2" v-bind:key="ult2.PLAYER">
         <td>{{ ult2.PLAYER }}</td>
         <!-- <td>{{m.Rk}}</td> -->
         <td>{{ ult2.POS }}</td>
-        <td>{{ ult2.PTS }}</td>
+        <!-- <td>{{ ult2.PTS }}</td>
         <td>{{ ult2.TREB }}</td>
-        <td>{{ MathRoundUp(ult2["FT%"]) }}%</td>
+        <td>{{ MathRoundUp(ult2["FT%"]) }}%</td> -->
 
         <!-- Comment:Json the values are strings turn to int -->
         <!-- <td>{{parseInt(m.TRB)+1}}</td> ˚ -->
@@ -415,7 +409,7 @@
       </td>
     </table>
     <!-- Utl3 Below-->
- <select v-on:change="filterMember(event, 'UTL3')" v-model="UTL3selected">
+    <select v-on:change="filterMember(event, 'UTL3')" v-model="UTL3selected">
       <!-- v-model="selected"> -->
       <option
         v-for="ult3 in basketballutl3ddl"
@@ -427,24 +421,23 @@
     </select>
 
     <table class="container" v-if="UTL3selected">
-   <tr>
+      <tr>
         <td class="PositionTitle">UTL3</td>
       </tr>
       <tr>
         <th>Player Name</th>
-        <!-- <th>Rank</th> -->
         <th>Position</th>
-        <th>Points</th>
-        <th>Rebound</th>
-        <th>FT%</th>
+        <!-- <th>Points</th> -->
+        <!-- <th>Rebound</th>
+        <th>FT%</th> -->
       </tr>
       <tr v-for="ult3 in basketballutl3" v-bind:key="ult3.PLAYER">
         <td>{{ ult3.PLAYER }}</td>
         <!-- <td>{{m.Rk}}</td> -->
         <td>{{ ult3.POS }}</td>
-        <td>{{ ult3.PTS }}</td>
+        <!-- <td>{{ ult3.PTS }}</td>
         <td>{{ ult3.TREB }}</td>
-        <td>{{ MathRoundUp(ult3["FT%"]) }}%</td>
+        <td>{{ MathRoundUp(ult3["FT%"]) }}%</td> -->
 
         <!-- Comment:Json the values are strings turn to int -->
         <!-- <td>{{parseInt(m.TRB)+1}}</td> ˚ -->
@@ -460,8 +453,376 @@
       </td>
     </table>
 
-    <hr>
+    <hr />
     <!-- Total Below  -->
+    <table class = "container">
+      <tr>
+        <th> Player Picked </th> 
+        </tr>
+       <tr>
+         <th>Pos</th>
+        <th>Player</th>
+        <th> Points</th>
+        <th> Rebound</th>
+        <th>Steal</th>
+        <th>TurnOver</th>
+        <th>Block</th>
+        <th>Assist</th>
+        <th>3PM</th>
+        <th>FT%</th>
+        <th>FG%</th>
+      </tr>
+        <tr>
+          <td>
+            Point Guard
+            </td>
+        <td>
+         {{pselected.PLAYER}}
+        </td>
+          <td>
+         {{pselected.PTS}}
+        </td>
+          <td>
+         {{pselected.TREB}}
+        </td>
+          <td>
+         {{pselected.STL}}
+        </td>
+          <td>
+         {{pselected.TO}}
+        </td>
+          <td>
+         {{pselected.BLK}}
+        </td>
+          <td>
+         {{pselected.AST}}
+        </td>
+          <td>
+         {{pselected["3PM"]}}
+        </td>
+          <td>
+         {{pselected["FT%"]}}
+        </td>
+          <td>
+         {{pselected["FG%"]}}
+        </td>
+      </tr>
+      <tr>
+         <td>
+         Shooting Guard
+            </td>
+        <td>
+         {{sgselected.PLAYER}}
+        </td>
+          <td>
+         {{sgselected.PTS}}
+        </td>
+          <td>
+         {{sgselected.TREB}}
+        </td>
+          <td>
+         {{sgselected.STL}}
+        </td>
+          <td>
+         {{sgselected.TO}}
+        </td>
+          <td>
+         {{sgselected.BLK}}
+        </td>
+          <td>
+         {{sgselected.AST}}
+        </td>
+          <td>
+         {{sgselected["3PM"]}}
+        </td>
+          <td>
+         {{sgselected["FT%"]}}
+        </td>
+          <td>
+         {{sgselected["FG%"]}}
+        </td>
+      </tr>
+      <tr>
+          <td>
+         Small Foward
+            </td>
+        <td>
+         {{sfselected.PLAYER}}
+        </td>
+          <td>
+         {{sfselected.PTS}}
+        </td>
+          <td>
+         {{sfselected.TREB}}
+        </td>
+          <td>
+         {{sfselected.STL}}
+        </td>
+          <td>
+         {{sfselected.TO}}
+        </td>
+          <td>
+         {{sfselected.BLK}}
+        </td>
+          <td>
+         {{sfselected.AST}}
+        </td>
+          <td>
+         {{sfselected["3PM"]}}
+        </td>
+          <td>
+         {{sfselected["FT%"]}}
+        </td>
+          <td>
+         {{sfselected["FG%"]}}
+        </td>
+      </tr>
+      <tr>
+          <td>
+        Power Forward
+            </td>
+        <td>
+         {{pfselected.PLAYER}}
+        </td>
+          <td>
+         {{pfselected.PTS}}
+        </td>
+          <td>
+         {{pfselected.TREB}}
+        </td>
+          <td>
+         {{pfselected.STL}}
+        </td>
+          <td>
+         {{pfselected.TO}}
+        </td>
+          <td>
+         {{pfselected.BLK}}
+        </td>
+          <td>
+         {{pfselected.AST}}
+        </td>
+          <td>
+         {{pfselected["3PM"]}}
+        </td>
+          <td>
+         {{pfselected["FT%"]}}
+        </td>
+          <td>
+         {{pfselected["FG%"]}}
+        </td>
+      </tr>
+      <tr>
+          <td>
+         Center
+            </td>
+        <td>
+         {{cselected.PLAYER}}
+        </td>
+          <td>
+         {{cselected.PTS}}
+        </td>
+          <td>
+         {{cselected.TREB}}
+        </td>
+          <td>
+         {{cselected.STL}}
+        </td>
+          <td>
+         {{cselected.TO}}
+        </td>
+          <td>
+         {{cselected.BLK}}
+        </td>
+          <td>
+         {{cselected.AST}}
+        </td>
+          <td>
+         {{cselected["3PM"]}}
+        </td>
+          <td>
+         {{cselected["FT%"]}}
+        </td>
+          <td>
+         {{cselected["FG%"]}}
+        </td>
+      </tr>
+      <tr>
+          <td>
+          Guard
+            </td>
+        <td>
+         {{gselected.PLAYER}}
+        </td>
+          <td>
+         {{gselected.PTS}}
+        </td>
+          <td>
+         {{gselected.TREB}}
+        </td>
+          <td>
+         {{gselected.STL}}
+        </td>
+          <td>
+         {{gselected.TO}}
+        </td>
+          <td>
+         {{gselected.BLK}}
+        </td>
+          <td>
+         {{gselected.AST}}
+        </td>
+          <td>
+         {{gselected["3PM"]}}
+        </td>
+          <td>
+         {{gselected["FT%"]}}
+        </td>
+          <td>
+         {{gselected["FG%"]}}
+        </td>
+      </tr>
+<tr>
+    <td>
+       Foward
+            </td>
+        <td>
+         {{fselected.PLAYER}}
+        </td>
+          <td>
+         {{fselected.PTS}}
+        </td>
+          <td>
+         {{fselected.TREB}}
+        </td>
+          <td>
+         {{fselected.STL}}
+        </td>
+          <td>
+         {{fselected.TO}}
+        </td>
+          <td>
+         {{fselected.BLK}}
+        </td>
+          <td>
+         {{fselected.AST}}
+        </td>
+          <td>
+         {{fselected["3PM"]}}
+        </td>
+          <td>
+         {{fselected["FT%"]}}
+        </td>
+          <td>
+         {{fselected["FG%"]}}
+        </td>
+      </tr>
+      <tr>
+          <td>
+         UTL1
+            </td>
+        <td>
+         {{UTL1selected.PLAYER}}
+        </td>
+          <td>
+         {{UTL1selected.PTS}}
+        </td>
+          <td>
+         {{UTL1selected.TREB}}
+        </td>
+          <td>
+         {{UTL1selected.STL}}
+        </td>
+          <td>
+         {{UTL1selected.TO}}
+        </td>
+          <td>
+         {{UTL1selected.BLK}}
+        </td>
+          <td>
+         {{UTL1selected.AST}}
+        </td>
+          <td>
+         {{UTL1selected["3PM"]}}
+        </td>
+          <td>
+         {{UTL1selected["FT%"]}}
+        </td>
+          <td>
+         {{UTL1selected["FG%"]}}
+        </td>
+      </tr>
+      <tr>
+          <td>
+         UTL2
+            </td>
+        <td>
+         {{UTL2selected.PLAYER}}
+        </td>
+          <td>
+         {{UTL2selected.PTS}}
+        </td>
+          <td>
+         {{UTL2selected.TREB}}
+        </td>
+          <td>
+         {{UTL2selected.STL}}
+        </td>
+          <td>
+         {{UTL2selected.TO}}
+        </td>
+          <td>
+         {{UTL2selected.BLK}}
+        </td>
+          <td>
+         {{UTL2selected.AST}}
+        </td>
+          <td>
+         {{UTL2selected["3PM"]}}
+        </td>
+          <td>
+         {{UTL2selected["FT%"]}}
+        </td>
+          <td>
+         {{UTL2selected["FG%"]}}
+        </td>
+      </tr>
+      <tr>
+          <td>
+         ULT3
+            </td>
+        <td>
+         {{UTL3selected.PLAYER}}
+        </td>
+          <td>
+         {{UTL3selected.PTS}}
+        </td>
+          <td>
+         {{UTL3selected.TREB}}
+        </td>
+          <td>
+         {{UTL3selected.STL}}
+        </td>
+          <td>
+         {{UTL3selected.TO}}
+        </td>
+          <td>
+         {{UTL3selected.BLK}}
+        </td>
+          <td>
+         {{UTL3selected.AST}}
+        </td>
+          <td>
+         {{UTL3selected["3PM"]}}
+        </td>
+          <td>
+         {{UTL3selected["FT%"]}}
+        </td>
+          <td>
+         {{UTL3selected["FG%"]}}
+        </td>
+      </tr>
+    </table>
     <table class="container">
       <tr>
         <th>Total</th>
@@ -472,13 +833,14 @@
         <th>Total Points</th>
         <th>Total Rebound</th>
         <th>Steal</th>
-        <th>TurnOver</th> 
+        <th>TurnOver</th>
         <th>Block</th>
         <th>Assist</th>
         <th>3PM</th>
         <th>FT%</th>
         <th>FG%</th>
       </tr>
+
       <tr>
         <td>
           {{
@@ -491,8 +853,8 @@
               gselected.PTS,
               fselected.PTS,
               UTL1selected.PTS,
-               UTL2selected.PTS,
-                UTL3selected.PTS,
+              UTL2selected.PTS,
+              UTL3selected.PTS
             )
           }}
         </td>
@@ -505,12 +867,11 @@
               sgselected.TREB,
               pfselected.TREB,
               cselected.TREB,
-                gselected.TREB,
+              gselected.TREB,
               fselected.TREB,
               UTL1selected.TREB,
               UTL2selected.TREB,
-              UTL3selected.TREB,
-
+              UTL3selected.TREB
             )
           }}
         </td>
@@ -522,12 +883,11 @@
               sgselected.STL,
               pfselected.STL,
               cselected.STL,
-                gselected.STL,
+              gselected.STL,
               fselected.STL,
               UTL1selected.STL,
               UTL2selected.STL,
-              UTL3selected.STL,
-
+              UTL3selected.STL
             )
           }}
         </td>
@@ -539,12 +899,11 @@
               sgselected.TO,
               pfselected.TO,
               cselected.TO,
-                gselected.TO,
+              gselected.TO,
               fselected.TO,
               UTL1selected.TO,
               UTL2selected.TO,
-              UTL3selected.TO,
-
+              UTL3selected.TO
             )
           }}
         </td>
@@ -556,12 +915,11 @@
               sgselected.BLK,
               pfselected.BLK,
               cselected.BLK,
-                gselected.BLK,
+              gselected.BLK,
               fselected.BLK,
               UTL1selected.BLK,
               UTL2selected.BLK,
-              UTL3selected.BLK,
-
+              UTL3selected.BLK
             )
           }}
         </td>
@@ -573,12 +931,11 @@
               sgselected.AST,
               pfselected.AST,
               cselected.AST,
-                gselected.AST,
+              gselected.AST,
               fselected.AST,
               UTL1selected.AST,
               UTL2selected.AST,
-              UTL3selected.AST,
-
+              UTL3selected.AST
             )
           }}
         </td>
@@ -590,11 +947,11 @@
               sgselected["3PM"],
               pfselected["3PM"],
               cselected["3PM"],
-                gselected["3PM"],
+              gselected["3PM"],
               fselected["3PM"],
               UTL1selected["3PM"],
               UTL2selected["3PM"],
-              UTL3selected["3PM"],
+              UTL3selected["3PM"]
             )
           }}
         </td>
@@ -607,10 +964,10 @@
               pfselected["FT%"],
               cselected["FT%"],
               gselected["FT%"],
-               fselected["FT%"],
+              fselected["FT%"],
               UTL1selected["FT%"],
               UTL2selected["FT%"],
-              UTL3selected["FT%"],
+              UTL3selected["FT%"]
             )
           }}%
         </td>
@@ -626,7 +983,7 @@
               fselected["FG%"],
               UTL1selected["FG%"],
               UTL2selected["FG%"],
-              UTL3selected["FG%"],
+              UTL3selected["FG%"]
             )
           }}%
         </td>
@@ -666,8 +1023,8 @@ var PostionC = basketball.filter(function (e) {
   if (e.POS.toLowerCase().indexOf(Center.toLowerCase()) > -1) return e;
 });
 
-const fiilterF = d => d['POS'].includes('F');
-const fiilterG = d => d['POS'].includes('G');
+const fiilterF = (d) => d["POS"].includes("F");
+const fiilterG = (d) => d["POS"].includes("G");
 var PostionG = basketball.filter(fiilterG);
 var PostionF = basketball.filter(fiilterF);
 export default {
@@ -822,8 +1179,7 @@ export default {
         this.basketballg = basketball.filter(function (e) {
           return e.PLAYER === valg["PLAYER"];
         });
-      } 
-       else if (type === "F") {
+      } else if (type === "F") {
         var valf = vm.fselected;
         console.log(valf);
         console.log(
@@ -834,8 +1190,8 @@ export default {
         this.basketballf = basketball.filter(function (e) {
           return e.PLAYER === valf["PLAYER"];
         });
-      } 
-      
+      }
+
       //else if (type === "UTL2") {
       //   var val2 = vm.cselected;
       //   console.log(val2);
@@ -847,7 +1203,7 @@ export default {
       //   this.basketballc = PostionC.filter(function (e) {
       //     return e.PLAYER === val2["PLAYER"];
       //   });
-      // } 
+      // }
       // else if (type === "UTL3") {
       //   var val3 = vm.cselected;
       //   console.log(val3);
@@ -859,14 +1215,13 @@ export default {
       //   this.basketballc = PostionC.filter(function (e) {
       //     return e.PLAYER === val3["PLAYER"];
       //   });
-      // } 
-      
+      // }
       else {
         console.log("no");
       }
     },
     MathRoundUp: function (string) {
-     // var number = String(string).substring(0, String(string).indexOf("("));
+      // var number = String(string).substring(0, String(string).indexOf("("));
       return (
         Math.round(
           parseInt(

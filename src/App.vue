@@ -1,216 +1,218 @@
 <template>
   <div id="app">
-    <h1>
-  Basketball Fantasy Simulator
-  <h2>
-    Create by PurpleDino
-  </h2>
+    <h1>Basketball Fantasy Simulator</h1>
+    <h2>Create by Macklemore</h2>
 
- <BasketballFantasySimulator />
+    <BasketballFantasySimulator />
 
-  <!-- Site footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <h6>About</h6>
-          <p class="text-justify">
-            Fantasy Simulator. Data used from
-            <a
-              href="https://hashtagbasketball.com/fantasy-basketball-projections"
-              >HashTagBasketball</a
-            >
-          </p>
+    <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">
+              Fantasy Simulator. Data used from
+              <a
+                href="https://hashtagbasketball.com/fantasy-basketball-projections"
+                >HashTagBasketball</a
+              >
+            </p>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li>
+                <a href="https://codepen.io/pablorgarcia/pen/qdIsm"
+                  >CSS Table</a
+                >
+              </li>
+              <li><a href="https://v3.vuejs.org/">VueJs</a></li>
+              <li>
+                <a href="https://codepen.io/scanfcode/pen/MEZPNd">Css Footer</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="col-xs-6 col-md-3">
-          <h6>Quick Links</h6>
-          <ul class="footer-links">
-            <li>
-              <a href="https://codepen.io/pablorgarcia/pen/qdIsm">CSS Table</a>
-            </li>
-            <li><a href="https://v3.vuejs.org/">VueJs</a></li>
-            <li>
-              <a href="https://codepen.io/scanfcode/pen/MEZPNd">Css Footer</a>
-            </li>
-          </ul>
+        <hr />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">
+              Copyright &copy; 2021 All Rights Reserved by Macklemore
+            </p>
+          </div>
         </div>
       </div>
-      <hr />
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-sm-6 col-xs-12">
-          <p class="copyright-text">
-            Copyright &copy; 2021 All Rights Reserved by Macklemore
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-</h1>
-
+    </footer>
   </div>
 </template>
 
 <script>
-import BasketballFantasySimulator from './components/BasketballFantasy.vue'
+import BasketballFantasySimulator from "./components/BasketballFantasy.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    BasketballFantasySimulator
-  }
-}
+    BasketballFantasySimulator,
+  },
+};
 </script>
 
 <style>
-   /*	
+/*	
 	Side Navigation Menu V2, RWD
 	===================
 	Author: https://github.com/pablorgarcia
  */
 
-  @charset "UTF-8";
-  @import url(
-    https://fonts.googleapis.com/css?family=Open + Sans:300,
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open + Sans:300,
     400,
-    700
-  );
+    700);
 
-  body {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300;
-    line-height: 1.42em;
-    color: #a7a1ae;
-    background-color: #1f2739;
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 10;
+  line-height: 1.42em;
+  color: #a7a1ae;
+  background-color: #1f2739;
+}
+
+select {
+  z-index: 10;
+  width: 200px;
+  font-size: 20px;
+  height: auto;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: 300;
+  line-height: 1em;
+  text-align: center;
+  color: #4dc3fa;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  line-height: 1em;
+  padding-bottom: 2em;
+  color: #fb667a;
+}
+
+h2 a {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fb667a;
+  text-decoration: none;
+}
+
+.blue {
+  color: #185875;
+}
+.yellow {
+  color: #fff842;
+}
+
+.container th {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+  color: #4dc3fa;
+}
+
+.container td {
+  font-weight: normal;
+  font-size: 15px;
+  -webkit-box-shadow: 0 2px 2px -2px #0e1119;
+  -moz-box-shadow: 0 2px 2px -2px #0e1119;
+  box-shadow: 0 2px 2px -2px #0e1119;
+}
+
+.container {
+  text-align: left;
+  overflow: hidden;
+  width: 80%;
+  margin: 20 auto;
+  display: table;
+  padding: 0 0 30 0;
+}
+
+.container td,
+.container th {
+  padding-bottom: 1%;
+  padding-top: 1%;
+  padding-left: 1%;
+  width: auto;
+}
+
+table {
+  table-layout: fixed;
+  width: 200%;
+}
+
+/* Background-color of the odd rows */
+.container tr:nth-child(odd) {
+  background-color: #323c50;
+}
+
+/* Background-color of the even rows */
+.container tr:nth-child(even) {
+  background-color: #2c3446;
+}
+
+.container th {
+  background-color: #1f2739;
+}
+
+.container td:first-child {
+  color: #fb667a;
+}
+.container td.last {
+  width: 1px;
+  white-space: nowrap;
+}
+
+.container tr:hover {
+  background-color: #464a52;
+  -webkit-box-shadow: 0 6px 6px -6px #0e1119;
+  -moz-box-shadow: 0 6px 6px -6px #0e1119;
+  box-shadow: 0 6px 6px -6px #0e1119;
+}
+
+.container td:hover {
+  background-color: #fff842;
+  color: #403e10;
+  font-weight: bold;
+
+  box-shadow: #7f7c21 -1px 1px, #7f7c21 -2px 2px, #7f7c21 -3px 3px,
+    #7f7c21 -4px 4px, #7f7c21 -5px 5px, #7f7c21 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  transition-property: all;
+  transition-timing-function: line;
+}
+
+.PositionTitle td {
+  background-color: #fff842;
+  color: #403e10;
+  font-weight: bold;
+
+  box-shadow: #7f7c21 -1px 1px, #7f7c21 -2px 2px, #7f7c21 -3px 3px,
+    #7f7c21 -4px 4px, #7f7c21 -5px 5px, #7f7c21 -6px 6px;
+}
+
+@media (max-width: 800px) {
+  .container td:nth-child(4),
+  .container th:nth-child(4) {
+    display: none;
   }
-
-  select {
-     z-index: 10;
-    width: 400px;
-    font-size: 40px;
-    height: auto;
-  }
-
-  h1 {
-    font-size: 3em;
-    font-weight: 300;
-    line-height: 1em;
-    text-align: center;
-    color: #4dc3fa;
-  }
-
-  h2 {
-    font-size: 1em;
-    font-weight: 300;
-    text-align: center;
-    display: block;
-    line-height: 1em;
-    padding-bottom: 2em;
-    color: #fb667a;
-  }
-
-  h2 a {
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #fb667a;
-    text-decoration: none;
-  }
-
-  .blue {
-    color: #185875;
-  }
-  .yellow {
-    color: #fff842;
-  }
-
-  .container th h1 {
-    font-weight: bold;
-    font-size: 1em;
-    text-align: left;
-    color: #185875;
-  }
-
-  .container td {
-    font-weight: normal;
-    font-size: 1em;
-    -webkit-box-shadow: 0 2px 2px -2px #0e1119;
-    -moz-box-shadow: 0 2px 2px -2px #0e1119;
-    box-shadow: 0 2px 2px -2px #0e1119;
-  }
-
-  .container {
-    text-align: left;
-    overflow: hidden;
-    width: 80%;
-    margin: 20 auto;
-    display: table;
-    padding: 0 0 30 0;
-  }
-
-  .container td,
-  .container th {
-    padding-bottom: 2%;
-    padding-top: 2%;
-    padding-left: 2%;
-  }
-
-  /* Background-color of the odd rows */
-  .container tr:nth-child(odd) {
-    background-color: #323c50;
-  }
-
-  /* Background-color of the even rows */
-  .container tr:nth-child(even) {
-    background-color: #2c3446;
-  }
-
-  .container th {
-    background-color: #1f2739;
-  }
-
-  .container td:first-child {
-    color: #fb667a;
-  }
-
-  .container tr:hover {
-    background-color: #464a52;
-    -webkit-box-shadow: 0 6px 6px -6px #0e1119;
-    -moz-box-shadow: 0 6px 6px -6px #0e1119;
-    box-shadow: 0 6px 6px -6px #0e1119;
-  }
-
-  .container td:hover {
-    background-color: #fff842;
-    color: #403e10;
-    font-weight: bold;
-
-    box-shadow: #7f7c21 -1px 1px, #7f7c21 -2px 2px, #7f7c21 -3px 3px,
-      #7f7c21 -4px 4px, #7f7c21 -5px 5px, #7f7c21 -6px 6px;
-    transform: translate3d(6px, -6px, 0);
-
-    transition-delay: 0s;
-    transition-duration: 0.4s;
-    transition-property: all;
-    transition-timing-function: line;
-  }
-
-  .PositionTitle td {
-    background-color: #fff842;
-    color: #403e10;
-    font-weight: bold;
-
-    box-shadow: #7f7c21 -1px 1px, #7f7c21 -2px 2px, #7f7c21 -3px 3px,
-      #7f7c21 -4px 4px, #7f7c21 -5px 5px, #7f7c21 -6px 6px;
-  }
-
-  @media (max-width: 800px) {
-    .container td:nth-child(4),
-    .container th:nth-child(4) {
-      display: none;
-    }
-  }
-
-
-
+}
 </style>
